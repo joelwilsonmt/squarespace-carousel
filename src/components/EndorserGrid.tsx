@@ -7,8 +7,8 @@ interface EndorserGridProps {
 
 export const EndorserGrid: React.FC<EndorserGridProps> = ({ endorsements }) => {
   return (
-    <div className="efm-max-w-7xl efm-mx-auto efm-px-4 efm-py-12 efm-bg-transparent">
-      <div className="efm-grid efm-grid-cols-1 md:efm-grid-cols-2 lg:efm-grid-cols-3 efm-gap-8 efm-bg-transparent">
+    <div className="efm-max-w-7xl efm-mx-auto efm-px-4 efm-py-12">
+      <div className="efm-grid efm-grid-cols-1 md:efm-grid-cols-2 lg:efm-grid-cols-3 efm-gap-8">
         {endorsements.map((endorser, index) => (
           <div
             key={index}
