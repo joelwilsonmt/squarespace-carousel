@@ -135,7 +135,7 @@ export const Carousel: React.FC = () => {
       </div>
 
       {/* Thumbnail Previews */}
-      <div className="efm-bg-white efm-py-4 efm-flex efm-justify-center efm-gap-4 efm-px-4 efm-overflow-x-auto">
+      <div className="efm-bg-transparent efm-py-4 efm-flex efm-justify-center efm-gap-4 efm-px-4 efm-overflow-x-auto">
         {images.map((img, index) => (
           <button
             key={index}

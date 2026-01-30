@@ -7,7 +7,7 @@
 :root {
   --efm-primary: #163C70;
   --efm-accent: #D4AF37;
-  --efm-background: #ffffff;
+  --efm-background: transparent;
   --efm-text: #333333;
 }
 
