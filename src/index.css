@@ -11,8 +11,3 @@
   --efm-text: #333333;
 }
 
-body {
-  margin: 0;
-  font-family: 'Nunito Sans', sans-serif;
-  color: var(--efm-text);
-}
