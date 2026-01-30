@@ -8,7 +8,7 @@ const App: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="efm-flex efm-items-center efm-justify-center efm-h-64">
+      <div className="efm-flex efm-items-center efm-justify-center efm-h-64 efm-bg-transparent">
         <div className="efm-animate-spin efm-rounded-full efm-h-12 efm-w-12 efm-border-t-2 efm-border-b-2 efm-border-primary"></div>
       </div>
     );
@@ -16,7 +16,7 @@ const App: React.FC = () => {
 
   if (error) {
     return (
-      <div className="efm-text-center efm-p-8 efm-text-red-600">
+      <div className="efm-text-center efm-p-8 efm-text-red-600 efm-bg-transparent">
         <p>Error: {error}</p>
       </div>
     );
@@ -28,7 +28,7 @@ const App: React.FC = () => {
       <section className="efm-py-12">
         <div className="efm-max-w-7xl efm-mx-auto efm-px-4">
           <h2 className="efm-text-3xl efm-font-bold efm-text-primary efm-mb-8 efm-text-center">
-            Our Endorsers
+            Our Campaign Endorsers
           </h2>
           <EndorserGrid endorsements={endorsements} />
         </div>

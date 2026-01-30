@@ -42,7 +42,7 @@ export const Carousel: React.FC = () => {
 
   if (loading) {
     return (
-      <div className="efm-relative efm-w-full efm-h-[600px] efm-flex efm-items-center efm-justify-center">
+      <div className="efm-relative efm-w-full efm-h-[600px] efm-flex efm-items-center efm-justify-center efm-bg-transparent">
         <Loader2 className="efm-w-10 efm-h-10 efm-text-primary efm-animate-spin" />
       </div>
     );
@@ -50,7 +50,7 @@ export const Carousel: React.FC = () => {
 
   if (error || images.length === 0) {
     return (
-      <div className="efm-relative efm-w-full efm-h-[600px] efm-flex efm-items-center efm-justify-center efm-text-gray-500">
+      <div className="efm-relative efm-w-full efm-h-[600px] efm-flex efm-items-center efm-justify-center efm-text-gray-500 efm-bg-transparent">
         {error || "No images found in gallery."}
       </div>
     );
@@ -80,7 +80,7 @@ export const Carousel: React.FC = () => {
   };
 
   return (
-    <div className="efm-relative efm-w-full efm-h-[600px] efm-overflow-hidden efm-flex efm-flex-col">
+    <div className="efm-relative efm-w-full efm-h-[600px] efm-overflow-hidden efm-flex efm-flex-col efm-bg-transparent">
       {/* Main Image Area */}
       <div className="efm-relative efm-flex-1 efm-overflow-hidden efm-flex efm-items-center efm-justify-center">
         <div className="efm-relative efm-h-full efm-max-w-full">
