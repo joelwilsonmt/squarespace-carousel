@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         primary: '#163C70',
         accent: '#D4AF37',
-        background: 'var(--efm-background, transparent)',
+
         text: '#333333',
       },
       fontFamily: {

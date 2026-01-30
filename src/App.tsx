@@ -6,6 +6,10 @@ import { useEndorsements } from './hooks/useEndorsements';
 const App: React.FC = () => {
   const { endorsements, loading, error } = useEndorsements();
 
+  React.useEffect(() => {
+    console.log("EFM Widget Version: 2.0.0-TRANSPARENT-FORCE");
+  }, []);
+
   if (loading) {
     return (
       <div className="efm-flex efm-items-center efm-justify-center efm-h-64 efm-bg-transparent">
@@ -28,7 +32,7 @@ const App: React.FC = () => {
       <section className="efm-py-12">
         <div className="efm-max-w-7xl efm-mx-auto efm-px-4">
           <h2 className="efm-text-3xl efm-font-bold efm-text-primary efm-mb-8 efm-text-center">
-            Our Campaign Endorsers
+            Transparency Verification Beta
           </h2>
           <EndorserGrid endorsements={endorsements} />
         </div>
