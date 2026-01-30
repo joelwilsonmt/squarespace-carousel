@@ -23,7 +23,7 @@ const App: React.FC = () => {
   }
 
   return (
-    <div className="efm-text-text efm-font-sans">
+    <div className="efm-bg-transparent efm-text-text efm-font-sans">
       <Carousel />
       <section className="efm-py-12">
         <div className="efm-max-w-7xl efm-mx-auto efm-px-4">

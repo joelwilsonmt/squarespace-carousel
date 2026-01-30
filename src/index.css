@@ -7,7 +7,13 @@
 :root {
   --efm-primary: #163C70;
   --efm-accent: #D4AF37;
-  --efm-background: transparent !important;
+  --efm-background: transparent;
   --efm-text: #333333;
+}
+
+/* Explicit transparency overrides for embedding */
+.efm-bg-background,
+.efm-bg-transparent {
+  background-color: transparent !important;
 }
 
