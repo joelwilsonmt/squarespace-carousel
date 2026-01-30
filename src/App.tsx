@@ -17,7 +17,7 @@ const App: React.FC = () => {
   if (error) {
     return (
       <div className="efm-text-center efm-p-8 efm-text-red-600">
-        <p>{error}</p>
+        <p>Error: {error}</p>
       </div>
     );
   }
