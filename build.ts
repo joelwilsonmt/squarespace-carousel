@@ -3,7 +3,9 @@ import { readFileSync, writeFileSync, rmSync, readdirSync, existsSync, mkdirSync
 import { join } from 'path';
 
 async function build() {
-  const distDir = join(import.meta.dir, 'dist');
+  const rootDir = import.meta.dir;
+  const distDir = join(rootDir, 'dist');
+  const srcDir = join(rootDir, 'src');
   
   // 1. Clean and ensure dist exists
   console.log('Cleaning dist directory...');
@@ -13,19 +15,22 @@ async function build() {
   mkdirSync(distDir);
 
   console.log('Generating CSS...');
+  const inputCss = join(srcDir, 'index.css');
+  const outputCss = join(distDir, 'output.css');
+  
   try {
-    execSync('bun x tailwindcss -i ./src/index.css -o ./dist/output.css --minify', { stdio: 'inherit' });
+    execSync(`bun x tailwindcss -i ${inputCss} -o ${outputCss} --minify`, { stdio: 'inherit' });
   } catch (e) {
     console.error('Tailwind build failed', e);
     process.exit(1);
   }
 
-  const css = readFileSync('./dist/output.css', 'utf-8');
+  const css = readFileSync(outputCss, 'utf-8');
 
   console.log('Building JS...');
   const result = await Bun.build({
-    entrypoints: ['./src/main.tsx'],
-    outdir: './dist',
+    entrypoints: [join(srcDir, 'main.tsx')],
+    outdir: distDir,
     minify: true,
     naming: 'widget.js',
     define: {
