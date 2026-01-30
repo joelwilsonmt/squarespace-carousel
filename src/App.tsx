@@ -28,7 +28,7 @@ const App: React.FC = () => {
       <section className="efm-py-12">
         <div className="efm-max-w-7xl efm-mx-auto efm-px-4">
           <h2 className="efm-text-3xl efm-font-bold efm-text-primary efm-mb-8 efm-text-center">
-            Our Endorsers
+            {window.WIDGET_TITLE || 'Our Endorsers'}
           </h2>
           <EndorserGrid endorsements={endorsements} />
         </div>

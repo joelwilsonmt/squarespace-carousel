@@ -11,18 +11,20 @@
   --efm-text: #333333;
 }
 
-/* The Nuclear Option: Force transparency on everything that isn't a known card */
+/* The Nuclear Option: Force transparency on everything that isn't a known white card */
 #endorser-carousel,
-#endorser-carousel > div,
-.efm-bg-transparent,
+#endorser-carousel > div:not(.efm-bg-white),
 .efm-bg-transparent,
 section.efm-py-12 {
   background-color: transparent !important;
   background: none !important;
 }
 
+.efm-bg-white {
+  background-color: white !important;
+}
+
 /* Ensure the grid container itself is transparent */
 .efm-max-w-7xl {
     background-color: transparent !important;
 }
-

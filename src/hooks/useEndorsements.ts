@@ -12,6 +12,7 @@ export interface Endorser {
 declare global {
   interface Window {
     CSV_SOURCE_URL?: string;
+    WIDGET_TITLE?: string;
   }
 }
 
@@ -79,7 +80,11 @@ export function useEndorsements() {
                 };
               });
 
-            setEndorsements(filtered);
+            const sorted = filtered.sort((a, b) => 
+              a.lastName.localeCompare(b.lastName)
+            );
+
+            setEndorsements(sorted);
             setLoading(false);
           },
           error: (err: any) => {
