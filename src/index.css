@@ -11,9 +11,18 @@
   --efm-text: #333333;
 }
 
-/* Explicit transparency overrides for embedding */
+/* The Nuclear Option: Force transparency on everything that isn't a known card */
+#endorser-carousel,
+#endorser-carousel > div,
 .efm-bg-background,
-.efm-bg-transparent {
+.efm-bg-transparent,
+section.efm-py-12 {
   background-color: transparent !important;
+  background: none !important;
+}
+
+/* Ensure the grid container itself is transparent */
+.efm-max-w-7xl {
+    background-color: transparent !important;
 }
 
